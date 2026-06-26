@@ -87,6 +87,24 @@ nohup python3 run_batch.py > batch.log 2>&1 &
 tail -f batch.log
 ```
 
+### Sharding across pods (JOB_ID)
+
+`hypotheses.json` is indexed 1..N (entry N has label `hNNNN_...`). Set `JOB_ID` to
+pick which entries this pod runs — everything else is skipped:
+
+```
+JOB_ID unset / 0 / all   run every hypothesis
+JOB_ID=7                 run only hypothesis 7
+JOB_ID=1-35              run a range (e.g. pod A: 1-35, pod B: 36-70)
+JOB_ID=1,4,9             run a specific list
+JOB_ID=1-10,20,30-32     any combination
+```
+
+Each job writes to `WORKDIR/<label>/` (checkpoint, `SOLVED.txt`, and a `DONE`
+marker), so multiple pods can share one `/workspace` network volume without
+colliding, and re-running skips finished jobs. The pod that finds it fires the
+result webhook and writes that job's `SOLVED.txt`.
+
 Each job writes to `WORKDIR/<label>/` (default `WORKDIR=/workspace`). Re-running the
 batch skips finished jobs and resumes an interrupted one from its checkpoint.
 

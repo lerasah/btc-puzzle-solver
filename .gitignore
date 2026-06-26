@@ -10,6 +10,7 @@ checkpoint.json
 **/checkpoint.json
 puzzle_checkpoint.json
 batch_done.json
+**/DONE
 workspace/
 /workspace/
 
