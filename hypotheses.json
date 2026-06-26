@@ -1,0 +1,39 @@
+[
+  {
+    "label": "h1_order_brave_world_phrase",
+    "overrides": {
+      "KNOWN_WORDS": ["moon", "tower", "food", "only", "real", "black", "subject", "this"],
+      "OPTIONAL_WORDS": ["order", "brave", "world", "phrase"]
+    }
+  },
+  {
+    "label": "h2_order_brave_world_find",
+    "overrides": {
+      "KNOWN_WORDS": ["moon", "tower", "food", "only", "real", "black", "subject", "this"],
+      "OPTIONAL_WORDS": ["order", "brave", "world", "find"]
+    }
+  },
+  {
+    "label": "h3_order_brave_world_seed",
+    "overrides": {
+      "KNOWN_WORDS": ["moon", "tower", "food", "only", "real", "black", "subject", "this"],
+      "OPTIONAL_WORDS": ["order", "brave", "world", "seed"]
+    }
+  },
+  {
+    "label": "h4_first_future_order_world",
+    "overrides": {
+      "KNOWN_WORDS": ["moon", "tower", "food", "only", "real", "black", "subject", "this"],
+      "OPTIONAL_WORDS": ["first", "future", "order", "world"]
+    }
+  },
+  {
+    "label": "h5_obw_phrase_clocklocks",
+    "overrides": {
+      "KNOWN_WORDS": ["moon", "tower", "food", "only", "real", "black", "subject", "this",
+                      "order", "brave", "world", "phrase"],
+      "OPTIONAL_WORDS": [],
+      "POSITION_LOCKS": {"moon": 10, "tower": 1}
+    }
+  }
+]

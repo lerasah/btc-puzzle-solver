@@ -1,0 +1,21 @@
+# secrets / local config  (NEVER commit the real webhook URL)
+.env
+*.env
+
+# runtime outputs
+*.log
+SOLVED.txt
+**/SOLVED.txt
+checkpoint.json
+**/checkpoint.json
+puzzle_checkpoint.json
+batch_done.json
+workspace/
+/workspace/
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
