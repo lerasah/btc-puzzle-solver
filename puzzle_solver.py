@@ -173,7 +173,7 @@ def notify(content, cfg, kind="status"):
         print(f"[webhook:dry-run:{kind}]", content)
         return
     body = json.dumps({"content": content[:1900]}).encode()
-    req = urllib.request.Request(url, data=body, headers={"Content-Type": "application/json"})
+    req = urllib.request.Request(url, data=body, headers={"Content-Type": "application/json", "User-Agent": "Mozilla/5.0 (compatible; puzzle-solver/1.0)"})
     try:
         urllib.request.urlopen(req, timeout=15)
     except Exception as e:
