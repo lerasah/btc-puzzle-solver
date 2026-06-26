@@ -1,39 +1,1472 @@
 [
   {
-    "label": "h1_order_brave_world_phrase",
+    "label": "h0001_order_brave_world_phrase",
     "overrides": {
-      "KNOWN_WORDS": ["moon", "tower", "food", "only", "real", "black", "subject", "this"],
-      "OPTIONAL_WORDS": ["order", "brave", "world", "phrase"]
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "world",
+        "phrase"
+      ]
     }
   },
   {
-    "label": "h2_order_brave_world_find",
+    "label": "h0002_order_brave_world_seed",
     "overrides": {
-      "KNOWN_WORDS": ["moon", "tower", "food", "only", "real", "black", "subject", "this"],
-      "OPTIONAL_WORDS": ["order", "brave", "world", "find"]
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "world",
+        "seed"
+      ]
     }
   },
   {
-    "label": "h3_order_brave_world_seed",
+    "label": "h0003_order_brave_world_find",
     "overrides": {
-      "KNOWN_WORDS": ["moon", "tower", "food", "only", "real", "black", "subject", "this"],
-      "OPTIONAL_WORDS": ["order", "brave", "world", "seed"]
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "world",
+        "find"
+      ]
     }
   },
   {
-    "label": "h4_first_future_order_world",
+    "label": "h0004_order_brave_phrase_seed",
     "overrides": {
-      "KNOWN_WORDS": ["moon", "tower", "food", "only", "real", "black", "subject", "this"],
-      "OPTIONAL_WORDS": ["first", "future", "order", "world"]
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "phrase",
+        "seed"
+      ]
     }
   },
   {
-    "label": "h5_obw_phrase_clocklocks",
+    "label": "h0005_order_brave_world_first",
     "overrides": {
-      "KNOWN_WORDS": ["moon", "tower", "food", "only", "real", "black", "subject", "this",
-                      "order", "brave", "world", "phrase"],
-      "OPTIONAL_WORDS": [],
-      "POSITION_LOCKS": {"moon": 10, "tower": 1}
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "world",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0006_order_brave_phrase_find",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "phrase",
+        "find"
+      ]
+    }
+  },
+  {
+    "label": "h0007_order_world_phrase_seed",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "world",
+        "phrase",
+        "seed"
+      ]
+    }
+  },
+  {
+    "label": "h0008_order_brave_world_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "world",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0009_order_brave_phrase_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "phrase",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0010_order_brave_seed_find",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "seed",
+        "find"
+      ]
+    }
+  },
+  {
+    "label": "h0011_order_world_phrase_find",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "world",
+        "phrase",
+        "find"
+      ]
+    }
+  },
+  {
+    "label": "h0012_brave_world_phrase_seed",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "world",
+        "phrase",
+        "seed"
+      ]
+    }
+  },
+  {
+    "label": "h0013_order_brave_phrase_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "phrase",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0014_order_brave_seed_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "seed",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0015_order_world_phrase_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "world",
+        "phrase",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0016_order_world_seed_find",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "world",
+        "seed",
+        "find"
+      ]
+    }
+  },
+  {
+    "label": "h0017_brave_world_phrase_find",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "world",
+        "phrase",
+        "find"
+      ]
+    }
+  },
+  {
+    "label": "h0018_order_brave_seed_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "seed",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0019_order_brave_find_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "find",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0020_order_world_phrase_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "world",
+        "phrase",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0021_order_world_seed_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "world",
+        "seed",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0022_order_phrase_seed_find",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "phrase",
+        "seed",
+        "find"
+      ]
+    }
+  },
+  {
+    "label": "h0023_brave_world_phrase_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "world",
+        "phrase",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0024_brave_world_seed_find",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "world",
+        "seed",
+        "find"
+      ]
+    }
+  },
+  {
+    "label": "h0025_order_brave_find_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "find",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0026_order_world_seed_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "world",
+        "seed",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0027_order_world_find_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "world",
+        "find",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0028_order_phrase_seed_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "phrase",
+        "seed",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0029_brave_world_phrase_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "world",
+        "phrase",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0030_brave_world_seed_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "world",
+        "seed",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0031_brave_phrase_seed_find",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "phrase",
+        "seed",
+        "find"
+      ]
+    }
+  },
+  {
+    "label": "h0032_order_brave_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "brave",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0033_order_world_find_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "world",
+        "find",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0034_order_phrase_seed_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "phrase",
+        "seed",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0035_order_phrase_find_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "phrase",
+        "find",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0036_brave_world_seed_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "world",
+        "seed",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0037_brave_world_find_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "world",
+        "find",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0038_brave_phrase_seed_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "phrase",
+        "seed",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0039_world_phrase_seed_find",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "world",
+        "phrase",
+        "seed",
+        "find"
+      ]
+    }
+  },
+  {
+    "label": "h0040_order_world_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "world",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0041_order_phrase_find_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "phrase",
+        "find",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0042_order_seed_find_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "seed",
+        "find",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0043_brave_world_find_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "world",
+        "find",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0044_brave_phrase_seed_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "phrase",
+        "seed",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0045_brave_phrase_find_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "phrase",
+        "find",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0046_world_phrase_seed_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "world",
+        "phrase",
+        "seed",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0047_order_phrase_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "phrase",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0048_order_seed_find_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "seed",
+        "find",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0049_brave_world_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "world",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0050_brave_phrase_find_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "phrase",
+        "find",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0051_brave_seed_find_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "seed",
+        "find",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0052_world_phrase_seed_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "world",
+        "phrase",
+        "seed",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0053_world_phrase_find_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "world",
+        "phrase",
+        "find",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0054_order_seed_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "seed",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0055_brave_phrase_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "phrase",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0056_brave_seed_find_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "seed",
+        "find",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0057_world_phrase_find_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "world",
+        "phrase",
+        "find",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0058_world_seed_find_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "world",
+        "seed",
+        "find",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0059_order_find_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "order",
+        "find",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0060_brave_seed_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "seed",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0061_world_phrase_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "world",
+        "phrase",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0062_world_seed_find_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "world",
+        "seed",
+        "find",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0063_phrase_seed_find_first",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "phrase",
+        "seed",
+        "find",
+        "first"
+      ]
+    }
+  },
+  {
+    "label": "h0064_brave_find_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "brave",
+        "find",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0065_world_seed_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "world",
+        "seed",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0066_phrase_seed_find_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "phrase",
+        "seed",
+        "find",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0067_world_find_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "world",
+        "find",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0068_phrase_seed_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "phrase",
+        "seed",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0069_phrase_find_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "phrase",
+        "find",
+        "first",
+        "future"
+      ]
+    }
+  },
+  {
+    "label": "h0070_seed_find_first_future",
+    "overrides": {
+      "KNOWN_WORDS": [
+        "moon",
+        "tower",
+        "food",
+        "only",
+        "real",
+        "black",
+        "subject",
+        "this"
+      ],
+      "OPTIONAL_WORDS": [
+        "seed",
+        "find",
+        "first",
+        "future"
+      ]
     }
   }
 ]

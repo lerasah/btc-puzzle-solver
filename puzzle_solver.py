@@ -59,8 +59,10 @@ CONFIG = dict(
     DERIVATIONS   = ["bip44", "m/0", "m/0h/0"],   # bip44 = m/44'/0'/0'/0/i
     RECEIVE_DEPTH = 5,                            # scan indices 0..RECEIVE_DEPTH-1
 
-    # Discord
-    DISCORD_WEBHOOK_URL  = os.environ.get("DISCORD_WEBHOOK_URL", ""),
+    # Discord — status pings and the final result can go to different channels.
+    DISCORD_STATUS_WEBHOOK_URL = os.environ.get("DISCORD_STATUS_WEBHOOK_URL", ""),  # start/heartbeat/per-job
+    DISCORD_RESULT_WEBHOOK_URL = os.environ.get("DISCORD_RESULT_WEBHOOK_URL", ""),  # only the 🎉 found alert
+    DISCORD_WEBHOOK_URL        = os.environ.get("DISCORD_WEBHOOK_URL", ""),         # fallback for both
     SEND_SEED_IN_WEBHOOK = False,   # SECURITY: keep False. If the channel/URL leaks,
                                     # a seed in the message = stolen prize. When False,
                                     # the alert just says "FOUND, grab it from the pod".
@@ -160,17 +162,22 @@ def _work(item):
 
 
 # ----------------------- notifications -----------------------
-def notify(content, cfg):
-    url = cfg["DISCORD_WEBHOOK_URL"]
+def notify(content, cfg, kind="status"):
+    """kind='result' -> result webhook; anything else -> status webhook.
+    Falls back to DISCORD_WEBHOOK_URL if the specific one isn't set."""
+    if kind == "result":
+        url = cfg.get("DISCORD_RESULT_WEBHOOK_URL") or cfg.get("DISCORD_WEBHOOK_URL") or ""
+    else:
+        url = cfg.get("DISCORD_STATUS_WEBHOOK_URL") or cfg.get("DISCORD_WEBHOOK_URL") or ""
     if not url:
-        print("[webhook:dry-run]", content)
+        print(f"[webhook:dry-run:{kind}]", content)
         return
     body = json.dumps({"content": content[:1900]}).encode()
     req = urllib.request.Request(url, data=body, headers={"Content-Type": "application/json"})
     try:
         urllib.request.urlopen(req, timeout=15)
     except Exception as e:
-        print("[webhook error]", e)
+        print(f"[webhook error:{kind}]", e)
 
 def on_found(hit, cfg):
     mn, pp, scheme, idx = hit
@@ -179,10 +186,10 @@ def on_found(hit, cfg):
                 f"passphrase:{pp!r}\nscheme:    {scheme} (match index {idx})\n"
                 f"found:     {datetime.now(timezone.utc).isoformat()}\n")
     if cfg["SEND_SEED_IN_WEBHOOK"]:
-        notify(f"🎉 SOLVED {cfg['TARGET']}\nseed: `{mn}`\npassphrase: `{pp}`\nidx {idx}", cfg)
+        notify(f"🎉 SOLVED {cfg['TARGET']}\nseed: `{mn}`\npassphrase: `{pp}`\nidx {idx}", cfg, kind="result")
     else:
         notify(f"🎉 FOUND {cfg['TARGET']} — seed written to {cfg['SOLVED_FILE']} on the pod. "
-               f"Retrieve it NOW (passphrase {'set' if pp else 'none'}, idx {idx}).", cfg)
+               f"Retrieve it NOW (passphrase {'set' if pp else 'none'}, idx {idx}).", cfg, kind="result")
     print("\n*** SOLVED ***  seed:", mn, "| passphrase:", repr(pp), "| idx", idx)
 
 
@@ -295,9 +302,11 @@ def selftest(cfg):
     print("RESULT 2:", "PASS ✅" if ok2 else "FAIL ❌")
 
     print("\n=== Overall:", "ALL PASS ✅ workflow is good" if (ok1 and ok2) else "SOMETHING FAILED ❌", "===")
-    if not cfg["DISCORD_WEBHOOK_URL"]:
-        print("(DISCORD_WEBHOOK_URL not set, so the 🎉 alerts above were dry-run prints. "
-              "Set the env var and re-run --selftest to confirm Discord delivery.)")
+    if not (cfg["DISCORD_STATUS_WEBHOOK_URL"] or cfg["DISCORD_RESULT_WEBHOOK_URL"] or cfg["DISCORD_WEBHOOK_URL"]):
+        print("(No webhook env vars set, so the alerts above were dry-run prints. Set "
+              "DISCORD_STATUS_WEBHOOK_URL and DISCORD_RESULT_WEBHOOK_URL and re-run "
+              "--selftest: the ▶️/❌ status pings should land in the status channel and "
+              "the 🎉 result in the result channel.)")
 
 
 if __name__ == "__main__":
