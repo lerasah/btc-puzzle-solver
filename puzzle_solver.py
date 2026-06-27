@@ -117,15 +117,15 @@ def addresses_for_seed(seed, schemes, depth):
     if need_root:
         root = Bip32Slip10Secp256k1.FromSeed(seed)
         if "m" in schemes:
-            out.append(P2PKHAddr.EncodeKey(root.PublicKey().KeyObject()))
+            out.append(P2PKHAddr.EncodeKey(root.PublicKey().KeyObject(), net_ver=b"\x00"))
         if "m/0" in schemes:
             n0 = root.ChildKey(Bip32KeyIndex(0))
             for i in range(depth):
-                out.append(P2PKHAddr.EncodeKey(n0.ChildKey(Bip32KeyIndex(i)).PublicKey().KeyObject()))
+                out.append(P2PKHAddr.EncodeKey(n0.ChildKey(Bip32KeyIndex(i)).PublicKey().KeyObject(), net_ver=b"\x00"))
         if "m/0h/0" in schemes:
             n0h = root.ChildKey(Bip32KeyIndex.HardenIndex(0)).ChildKey(Bip32KeyIndex(0))
             for i in range(depth):
-                out.append(P2PKHAddr.EncodeKey(n0h.ChildKey(Bip32KeyIndex(i)).PublicKey().KeyObject()))
+                out.append(P2PKHAddr.EncodeKey(n0h.ChildKey(Bip32KeyIndex(i)).PublicKey().KeyObject(), net_ver=b"\x00"))
     return out
 
 
