@@ -1,0 +1,20 @@
+[
+  {
+    "label": "t24_example_replace_me",
+    "overrides": {
+      "SEED_LEN": 24,
+      "KNOWN_WORDS": [
+        "moon", "tower", "food", "black", "real", "subject", "this", "only",
+        "time", "save", "actual", "march", "matter", "peace", "eye", "vote",
+        "one", "gun", "camera", "history", "future", "first", "order", "world"
+      ],
+      "OPTIONAL_WORDS": [],
+      "POSITION_LOCKS": {
+        "moon": 1, "tower": 2, "food": 3, "black": 4, "real": 5, "subject": 6,
+        "this": 7, "only": 8, "time": 9, "save": 10, "actual": 11, "march": 12,
+        "matter": 13, "peace": 14, "eye": 15, "vote": 16, "one": 17, "gun": 18,
+        "camera": 19, "history": 20
+      }
+    }
+  }
+]

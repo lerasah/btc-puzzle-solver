@@ -283,7 +283,7 @@ def selftest(cfg):
     c = dict(cfg)
     c.update(TARGET=ADDR_NOPP, SEED_LEN=12, KNOWN_WORDS=words, OPTIONAL_WORDS=[],
              POSITION_LOCKS={w: i+1 for i, w in enumerate(words[:10])},   # lock first 10
-             PASSPHRASES=[""], DERIVATIONS=["bip44"], RECEIVE_DEPTH=1,
+             PASSPHRASES=[""], DERIVATIONS=["bip44", "m/0", "m/0h/0"], RECEIVE_DEPTH=2,
              CHECKPOINT_FILE="/tmp/st1.json", SOLVED_FILE="/tmp/st1_SOLVED.txt", WORKERS=2)
     if os.path.exists(c["CHECKPOINT_FILE"]): os.remove(c["CHECKPOINT_FILE"])
     hit = run(c)
@@ -294,14 +294,41 @@ def selftest(cfg):
     c2 = dict(cfg)
     c2.update(TARGET=ADDR_PP, SEED_LEN=12, KNOWN_WORDS=words, OPTIONAL_WORDS=[],
               POSITION_LOCKS={w: i+1 for i, w in enumerate(words[:11])},  # lock 11 -> 1 ordering
-              PASSPHRASES=["nope", "test", "xyz"], DERIVATIONS=["bip44"], RECEIVE_DEPTH=1,
+              PASSPHRASES=["nope", "test", "xyz"], DERIVATIONS=["bip44", "m/0", "m/0h/0"], RECEIVE_DEPTH=2,
               CHECKPOINT_FILE="/tmp/st2.json", SOLVED_FILE="/tmp/st2_SOLVED.txt", WORKERS=2)
     if os.path.exists(c2["CHECKPOINT_FILE"]): os.remove(c2["CHECKPOINT_FILE"])
     hit2 = run(c2)
     ok2 = hit2 is not None and hit2[1] == "test"
     print("RESULT 2:", "PASS ✅" if ok2 else "FAIL ❌")
 
-    print("\n=== Overall:", "ALL PASS ✅ workflow is good" if (ok1 and ok2) else "SOMETHING FAILED ❌", "===")
+    print("\n=== SELF-TEST 3: alternate derivation path (m/0/0) must resolve ===")
+    ADDR_M0 = "1MF2X6VmJ8qQqVQa97JD2ZYJ2D2qKPmhMW"   # same seed, derived at m/0/0
+    c3 = dict(cfg)
+    c3.update(TARGET=ADDR_M0, SEED_LEN=12, KNOWN_WORDS=words, OPTIONAL_WORDS=[],
+              POSITION_LOCKS={w: i+1 for i, w in enumerate(words[:11])},  # 1 ordering
+              PASSPHRASES=[""], DERIVATIONS=["bip44", "m/0", "m/0h/0"], RECEIVE_DEPTH=2,
+              CHECKPOINT_FILE="/tmp/st3.json", SOLVED_FILE="/tmp/st3_SOLVED.txt", WORKERS=2)
+    if os.path.exists(c3["CHECKPOINT_FILE"]): os.remove(c3["CHECKPOINT_FILE"])
+    hit3 = run(c3)
+    ok3 = hit3 is not None and hit3[0] == M
+    print("RESULT 3:", "PASS ✅" if ok3 else "FAIL ❌")
+
+    print("\n=== SELF-TEST 4: 24-word seed mode must resolve ===")
+    M24 = ("eyebrow sight swap fame soup they ahead walnut bulb illegal verb arctic "
+           "crime pulse stereo artefact differ engine ivory bitter coin amazing actress hold")
+    ADDR24 = "1F5wpaDci7ZKXHAxf9w3gd9g4P1czSfdds"
+    w24 = M24.split()
+    c4 = dict(cfg)
+    c4.update(TARGET=ADDR24, SEED_LEN=24, KNOWN_WORDS=w24, OPTIONAL_WORDS=[],
+              POSITION_LOCKS={w: i+1 for i, w in enumerate(w24[:23])},  # 1 ordering
+              PASSPHRASES=[""], DERIVATIONS=["bip44"], RECEIVE_DEPTH=1,
+              CHECKPOINT_FILE="/tmp/st4.json", SOLVED_FILE="/tmp/st4_SOLVED.txt", WORKERS=2)
+    if os.path.exists(c4["CHECKPOINT_FILE"]): os.remove(c4["CHECKPOINT_FILE"])
+    hit4 = run(c4)
+    ok4 = hit4 is not None and hit4[0] == M24
+    print("RESULT 4:", "PASS ✅" if ok4 else "FAIL ❌")
+
+    print("\n=== Overall:", "ALL PASS ✅ workflow is good" if (ok1 and ok2 and ok3 and ok4) else "SOMETHING FAILED ❌", "===")
     if not (cfg["DISCORD_STATUS_WEBHOOK_URL"] or cfg["DISCORD_RESULT_WEBHOOK_URL"] or cfg["DISCORD_WEBHOOK_URL"]):
         print("(No webhook env vars set, so the alerts above were dry-run prints. Set "
               "DISCORD_STATUS_WEBHOOK_URL and DISCORD_RESULT_WEBHOOK_URL and re-run "
